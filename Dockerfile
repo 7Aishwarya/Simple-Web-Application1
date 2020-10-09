@@ -1,13 +1,13 @@
-From node:latest
+FROM node:latest
 
 RUN mkdir -p /usr/src/app
 
-Workdir /usr/src/app
+WORKDIR /usr/src/app
 
-copy package*.json ./
+COPY package*.json ./
 
-run npm install
+RUN npm install
 
-copy . .
+COPY . .
 
-cmd ["npm","start"]
+CMD ["npm","start"]

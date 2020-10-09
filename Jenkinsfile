@@ -1,4 +1,18 @@
 pipeline {
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                sh 'npm install'
+                sh 'npm build'
+            }
+        }
+    }
+}
+
+
+
+/*pipeline {
   environment {
     registry = "aishdockerid/simple-web-application"
     registryCredential = 'aishdockerid'
@@ -34,3 +48,4 @@ pipeline {
     }
   }
 }
+*/
