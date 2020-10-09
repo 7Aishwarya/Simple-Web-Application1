@@ -1,7 +1,7 @@
 pipeline {
   environment {
     registry = "aishdockerid/simple-web-application"
-    registryCredential = 'dockerhub'
+    registryCredential = 'aishdockerid'
     dockerImage = ''
   }
   agent any
